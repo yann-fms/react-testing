@@ -1,9 +1,11 @@
+type GreetProps ={
+    name?: string
+}
 
-
-const greet = () => {
+const greet = (props: GreetProps) => {
   return (
     <div>
-      Hello
+      Hello {props.name}
     </div>
   )
 }
