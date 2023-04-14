@@ -1,6 +1,4 @@
-type GreetProps ={
-    name?: string
-}
+import {GreetProps} from './greet.types'
 
 const greet = (props: GreetProps) => {
   return (
