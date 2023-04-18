@@ -9,7 +9,7 @@ export const Application =() => {
             <form>
                 <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" placeholder="Fullname" value="Yann"/>
+                    <input type="text" id="name" placeholder="Fullname" value="Yann" onChange={() => {} }/>
                     <img src='./image.png' alt='logo'/>
                 </div>
                 <div data-testid= "custom-element">

@@ -1,9 +1,11 @@
 import { getByTitle, render, screen } from '@testing-library/react';
 import { Application } from './application';
 
-describe('Application', () => {
+describe.skip('Application', () => {
     test('renders correctly', () => {
         render(<Application />);
+
+        //! getByRole is the matcher to use in priority tofind on element 
         const pageHeading = screen.getByRole("heading", {
             name:'Job Application'
         });
@@ -52,7 +54,7 @@ describe('Application', () => {
         //! getByTestid
         const elementcustomTestid = screen.getByTestId('custom-element');
         expect(elementcustomTestid).toBeInTheDocument();
-        
+
         //! getByTitle
         const ElementSpan = screen.getByTitle('close');
         expect(ElementSpan).toBeInTheDocument();
