@@ -22,7 +22,6 @@ describe('usecounter', () => {
         expect(result.current.count).toBe(1);
         
     });
-    
     test('should decrement the count', () => {
         const { result } = renderHook(useCounter);
         act(()=> result.current.decrement());
