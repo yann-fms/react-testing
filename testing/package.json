@@ -23,12 +23,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore .gitignore .",
+    "format": "prettier --ignore-path .gitignre --write \"**/*.{ts,tsx,css,scss}\"",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jest-dom/recommended"
     ]
   },
   "browserslist": {
@@ -44,6 +48,9 @@
     ]
   },
   "devDependencies": {
-    "msw": "^1.2.1"
+    "eslint-plugin-jest-dom": "^4.0.3",
+    "msw": "^1.2.1",
+    "prettier": "2.8.7",
+    "husky": "^8.0.0"
   }
 }
